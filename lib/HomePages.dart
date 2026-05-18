@@ -43,7 +43,7 @@ class Homepages extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: const CupertinoNavigationBar(
-        middle: Text('Calculadora iOS'),
+        middle: Text('Adal Eliel'),
       ),
       child: SafeArea(
         child: Column(
