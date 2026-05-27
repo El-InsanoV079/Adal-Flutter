@@ -18,7 +18,7 @@ class CalculadoraLogic {
       double valor = double.tryParse(resultado) ?? 0;
       if (valor >= 0) {
         double raiz = sqrt(valor);
-        // Si es entero, quitamos el .0 visual
+        
         resultado = raiz % 1 == 0 ? raiz.toInt().toString() : raiz.toStringAsFixed(4);
       } else {
         resultado = 'Error';
@@ -52,7 +52,7 @@ class CalculadoraLogic {
       _primerOperando = null;
       _debeReiniciarPantalla = true;
     } else {
-      // Es un número o un punto decimal
+
       if (_debeReiniciarPantalla) {
         resultado = texto == '.' ? '0.' : texto;
         _debeReiniciarPantalla = false;
@@ -60,7 +60,7 @@ class CalculadoraLogic {
         if (resultado == '0' && texto != '.') {
           resultado = texto;
         } else {
-          if (texto == '.' && resultado.contains('.')) return; // Evita doble punto
+          if (texto == '.' && resultado.contains('.')) return;
           resultado += texto;
         }
       }
